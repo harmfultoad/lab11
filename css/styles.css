@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #ffe6f2;
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #ff99cc;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.executor-card {
+  background: #fff0f5;
+  border: 1px solid #ff99cc;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.executor-card:hover {
+  transform: scale(1.02);
+}
+
+.rating-panel {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ff99cc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.rating-item {
+  margin-bottom: 10px;
+}
+
+.contract-button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background: #ff66b3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contract-button:hover {
+  background: #ff1493;
+}
+
+.handshake-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: rgba(255, 182, 193, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.handshake-image {
+  width: 200px;
+  height: auto;
+}
+
+.satisfaction-chart {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes handshake-move {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.handshake-image {
+  animation: handshake-move 2s ease-in-out infinite;
+  filter: drop-shadow(0 4px 6px rgba(255, 102, 178, 0.5));
+}
+
+@media (max-width: 768px) {
+  .executor-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .satisfaction-chart canvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
