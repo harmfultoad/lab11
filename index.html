@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Биржа услуг</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+  <header>
+    <h1>Биржа услуг ZHAK ИЗМЕНЕНИЯ</h1>
+  </header>
+
+  <main>
+    <!-- Карточки исполнителей -->
+    <div class="executors">
+      <div class="executor-card">
+        <h3>Исполнитель 1</h3>
+        <button class="toggle-rating">Оценить</button>
+        <div class="rating-panel" style="display: none;">
+          <h4>Оцените исполнителя:</h4>
+          <div class="rating-item">
+            <label>Качество работы:</label>
+            <input type="range" min="1" max="5" value="0" class="quality-rating">
+          </div>
+          <div class="rating-item">
+            <label>Скорость выполнения:</label>
+            <input type="range" min="1" max="5" value="0" class="speed-rating">
+          </div>
+          <div class="rating-item">
+            <label>Коммуникация:</label>
+            <input type="range" min="1" max="5" value="0" class="communication-rating">
+          </div>
+          <div class="rating-item">
+            <label>Цена/качество:</label>
+            <input type="range" min="1" max="5" value="0" class="price-rating">
+          </div>
+          <button class="submit-rating">Отправить оценку</button>
+        </div>
+        <button class="contract-button">Договор</button>
+      </div>
+
+      <div class="executor-card">
+        <h3>Исполнитель 2</h3>
+        <button class="toggle-rating">Оценить</button>
+        <div class="rating-panel" style="display: none;">
+          <h4>Оцените исполнителя:</h4>
+          <div class="rating-item">
+            <label>Качество работы:</label>
+            <input type="range" min="1" max="5" value="0" class="quality-rating">
+          </div>
+          <div class="rating-item">
+            <label>Скорость выполнения:</label>
+            <input type="range" min="1" max="5" value="0" class="speed-rating">
+          </div>
+          <div class="rating-item">
+            <label>Коммуникация:</label>
+            <input type="range" min="1" max="5" value="0" class="communication-rating">
+          </div>
+          <div class="rating-item">
+            <label>Цена/качество:</label>
+            <input type="range" min="1" max="5" value="0" class="price-rating">
+          </div>
+          <button class="submit-rating">Отправить оценку</button>
+        </div>
+        <button class="contract-button">Договор</button>
+      </div>
+    </div>
+
+    <!-- Панель удовлетворенности -->
+    <div class="satisfaction-chart">
+      <h3>Уровень удовлетворенности услугами</h3>
+      <canvas id="satisfactionChart"></canvas>
+    </div>
+
+    <!-- Анимация рукопожатия -->
+    <div class="handshake-animation" style="display: none;">
+      <img src="assets/handshake.svg" alt="Handshake" class="handshake-image">
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+  <script src="js/chart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
